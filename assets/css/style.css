@@ -1,67 +1,82 @@
-* {
-  box-sizing: border-box;
+:root{
+  --dark-blue: #13293d;
 }
 
-body {
-  font-family: Arial;
-  margin: 0;
-}
+/* profile img */
 img {
-  display: inline;
-  width: 250px;
-  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: 25%;
 }
+
 header {
   padding: 60px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
+  text-align: left;
+  background: var(--dark-blue);
+  color: white;
 }
 
+/* the guide bar */
 nav {
   display: flex;
-  background-color: #d8a47f;
+  border: 5px solid black;
+  text-align: center;
+  background-color: var(--dark-blue);
 }
 
-nav p {
-  padding: 14px 20px;
-  text-decoration: none;
+/* the text for the guide bar */
+nav a {
+  padding: 40px;
+  text-align: center;
+  color: white;
 }
 
 main {
   display: flex;
+  border: 5px black;
 }
 
+/* contact info */
 aside {
   flex: 30%;
-  background-color: #b9c6ae;
+  background-color: var(--dark-blue);
   padding: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
+  border: 5px black;
+}
+/* contact info text */
+aside li{
+  color: white;
 }
 
+/* contact info Header text */
+aside h2{
+  color: white;
+  border: 5px black;
+}
+
+/* This is the main boddy of the Page */
 section {
   flex: 70%;
-  background-color: #fff;
-  padding: 20px;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 40px;
 }
 
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
+.About{
+  border: 5px black;
 }
 
-/* Image Placeholders */
-.sample-img {
-  background-color: #fff;
-  width: 100%;
-  padding: 20px;
-  height: 200px;
-  border: 1px solid black;
+.image2{
+  float: left;
+  padding-right: 20px;
 }
 
-/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
+.Work{
+  position: relative;
+}
 
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
@@ -69,11 +84,11 @@ footer {
     background: #772014;
   }
 }
-
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
   nav {
     background-color: #bb8588;
+    flex-direction: column;
   }
 }
 
@@ -81,5 +96,8 @@ footer {
 @media screen and (max-width: 576px) {
   .sample-img {
     background-color: #8ac4ff;
+  }
+  aside{
+    display: none;
   }
 }
