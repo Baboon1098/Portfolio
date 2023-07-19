@@ -11,6 +11,7 @@ img {
   height: 25%;
 }
 
+/* Allows for the Header to be blue and aligns the text */
 header {
   padding: 60px;
   text-align: left;
@@ -22,19 +23,20 @@ header {
 nav {
   display: flex;
   border: 5px solid black;
-  text-align: center;
-  background-color: var(--dark-blue);
+  align-content: center;
+  background-color: red;
 }
 
 /* the text for the guide bar */
 nav a {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   color: white;
 }
 
 main {
   display: flex;
+  flex: 3 0px;
   border: 5px black;
 }
 
@@ -69,13 +71,14 @@ section {
   border: 5px black;
 }
 
+/* This formats the second image */
 .image2{
   float: left;
   padding-right: 20px;
 }
 
-.Work{
-  position: relative;
+.footer{
+  order: 4;
 }
 
 /* Tablets - header changes color */
